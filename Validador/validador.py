@@ -14,18 +14,6 @@ def verificar_renavam(renavam):
         return renavam.zfill(11)
 
 def validar_renavam(renavam):
-    '''
-    No caso do RENAVAM, o DV (dígito verificador)
-    módulo 11 é calculado multiplicando cada dígito
-    do número base pela sequência de multiplicadores
-    2, 3, 4, 5, 6, 7, 8, 9, 2 e 3, posicionados da
-    direita para a esquerda.
-    O somatório destas multiplicações é
-    multiplicado por 10 e depois dividido
-    por 11, e o resto desta divisão é o DV.
-    Porém, sempre que o resto da divisão for
-    10, o DV será 0.
-    '''
 
     # remove ultimo digito (verificador)
     renavam_sem_digito = renavam[:-1]
